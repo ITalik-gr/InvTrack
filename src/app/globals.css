@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply flex
+}
+
+.sidebar-item--active {
+  @apply rounded-md bg-blue text-white relative max-h-[50px];
+  svg {
+    path {
+      fill: #FFF;
+    }
+  }
+}
+.sidebar-item--active:before {
+  content: "";
+  position: absolute;
+  @apply top-0 -left-[27px] h-[50px] bg-blue rounded-md w-2
+}
